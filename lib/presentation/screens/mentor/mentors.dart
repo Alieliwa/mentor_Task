@@ -1,3 +1,4 @@
+import 'package:elmentor/presentation/component/mentors_card.dart';
 import 'package:elmentor/presentation/component/progress_bar.dart';
 import 'package:elmentor/presentation/component/search_bar.dart';
 import 'package:elmentor/presentation/resources/fonts_manager.dart';
@@ -30,6 +31,26 @@ class _MentorsState extends State<Mentors> {
         children: [
           progressBar(width: 138.21,),
           SizedBox(height: AppSize.s31,),
+          buildTextFormField(onSubmited: (){},
+          hintText: AppStrings.search,
+            prefix: Padding(
+              padding: const EdgeInsets.all(AppPadding.p20),
+              child: Image.asset("assets/image/img_3.png",
+              width: AppSize.s16,
+              height: AppSize.s16,
+              ),
+            ),
+            suffix: Padding(
+              padding: const EdgeInsets.only(right: AppPadding.p8),
+              child: Icon(Icons.filter_list),
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+                itemCount: 4,
+                itemBuilder:(BuildContext context, int index)=> MentorCard() ),
+          )
+          ,
         ],
 
       ),

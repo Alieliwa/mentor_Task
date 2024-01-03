@@ -42,7 +42,7 @@ class _BookSessionFreeState extends State<BookSessionFree> {
           )
         ],
       ),
-      body: Column(
+      body: ListView(
         children: [
           sessionContainer(),
           progressBar(width: 69.10,),
