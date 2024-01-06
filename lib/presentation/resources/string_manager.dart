@@ -30,6 +30,10 @@ class AppStrings{
   static const date = "Date";
   static const time = "Time";
   static const payment = "Payment";
+  static const promoCode = "Promo code";
+  static const bookSession = "Book a session";
+  static const successfully = "Booked successfully!";
+  static const confirm = "Confirm";
   static const rate = "4/5";
   static const discount = "You already used your FREE session, book another session with a 50% discount!";
   static const fREE = "Grab your opportunity! Book a mentorship session for 100 EGP or go Premium and get a FREE session! ";

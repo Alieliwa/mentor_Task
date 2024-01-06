@@ -1,5 +1,6 @@
 import 'package:elmentor/presentation/resources/string_manager.dart';
 import 'package:elmentor/presentation/screens/book_session/book_session_free.dart';
+import 'package:elmentor/presentation/screens/booked_successfully/booked_successfully.dart';
 import 'package:elmentor/presentation/screens/details/details.dart';
 import 'package:elmentor/presentation/screens/mentor/mentors.dart';
 import 'package:elmentor/presentation/screens/payment/payment.dart';
@@ -10,7 +11,7 @@ class Routs {
   static const String mentorsRoute = "/mentors";
   static const String detailsRoute = "/details";
   static const String paymentRoute = "/payment";
-  // static const String mainRoute = "/main";
+  static const String successfullyRoute = "/successfully";
   // static const String onBoardingRoute = "/onBoarding";
   // static const String storeDetailsRoute = "/storeDetails";
 }
@@ -26,8 +27,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => DetailsScreen());
       case Routs.paymentRoute:
         return MaterialPageRoute(builder: (_) => Payment());
-      // case Routs.mainRoute:
-      //   return MaterialPageRoute(builder: (_) => MainView());
+      // case Routs.successfullyRoute:
+      //   return MaterialPageRoute(builder: (_) => BookedSuccessfully());
       // case Routs.storeDetailsRoute:
       //   return MaterialPageRoute(builder: (_) => StoreDetailsView());
       // case Routs.onBoardingRoute:
