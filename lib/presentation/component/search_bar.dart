@@ -43,49 +43,46 @@ class buildTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-          left: AppPadding.p24, right: AppPadding.p24, bottom: AppPadding.p24),
-      child: Container(
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-        ),
-        child: TextFormField(
-          focusNode: focusNode,
-          // readOnly: readonly,
-          maxLines: max,
-          autofocus: false,
-          textDirection: TextDirection.rtl,
-          decoration: InputDecoration(
-            contentPadding:
-                const EdgeInsets.only(right: 15, left: 15, top: 0, bottom: 0),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: ColorManager.primary,
-              ),
-              borderRadius: BorderRadius.circular(1000.0),
+    return Container(
+      decoration:  BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(30)),
+        color: ColorManager.white
+      ),
+      child: TextFormField(
+        focusNode: focusNode,
+        // readOnly: readonly,
+        maxLines: max,
+        autofocus: false,
+        textDirection: TextDirection.rtl,
+        decoration: InputDecoration(
+          contentPadding:
+              const EdgeInsets.only(right: 15, left: 15, top: 0, bottom: 0),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: ColorManager.primary,
             ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(1000),
-            ),
-            hintText: hintText,
-            suffixIcon: suffix,
-            labelText: labelText,
-            prefixIcon: prefix,
-            hintStyle: const TextStyle(color: Color(0xFF8D8E98)),
-            labelStyle: TextStyle(color: ColorManager.primary),
+            borderRadius: BorderRadius.circular(1000.0),
           ),
-          onFieldSubmitted: (val) {
-            onSubmited();
-          },
-          controller: controller,
-          textAlign: TextAlign.left,
-          // obscureText: obscureText!,
-          validator: validator,
-          keyboardType: type,
-          onChanged: onChanged,
-          onTap: onTap,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(1000),
+          ),
+          hintText: hintText,
+          suffixIcon: suffix,
+          labelText: labelText,
+          prefixIcon: prefix,
+          hintStyle: const TextStyle(color: Color(0xFF8D8E98)),
+          labelStyle: TextStyle(color: ColorManager.primary),
         ),
+        onFieldSubmitted: (val) {
+          onSubmited();
+        },
+        controller: controller,
+        textAlign: TextAlign.left,
+        // obscureText: obscureText!,
+        validator: validator,
+        keyboardType: type,
+        onChanged: onChanged,
+        onTap: onTap,
       ),
     );
   }

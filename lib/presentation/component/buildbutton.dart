@@ -22,29 +22,27 @@ class materialButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: AppPadding.p24,left: AppPadding.p24),
-      child: Container(
-        width: double.infinity,
-        height: 56,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(circle!)),
-        clipBehavior: Clip.antiAliasWithSaveLayer,
-        child: MaterialButton(
-          color: color,
-          hoverColor: ColorManager.black,
-          onPressed: onPressed,
-          child:  Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                text!,
-                style: TextStyle(
-                  fontSize: FontSize.s20,
-                  color: textColor,
-                ),
+    return Container(
+      width: double.infinity,
+      height: 56,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(circle!)),
+      clipBehavior: Clip.antiAliasWithSaveLayer,
+      child: MaterialButton(
+        color: color,
+        hoverColor: ColorManager.black,
+        onPressed: onPressed,
+        child:  Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text!,
+              style: TextStyle(
+                fontSize: FontSize.s16,
+                fontWeight: FontWeight.w600,
+                color: textColor,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -10,6 +10,7 @@ import 'package:elmentor/presentation/screens/career_advisor/career%D9%80advisor
 import 'package:elmentor/presentation/screens/college_mentor/college_mentor.dart';
 import 'package:elmentor/presentation/screens/mentor/mentors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BookSessionFree extends StatefulWidget {
   const BookSessionFree({super.key});
@@ -28,8 +29,10 @@ class _BookSessionFreeState extends State<BookSessionFree> {
         centerTitle: true,
         title: Text(
           AppStrings.appBarOne,
-          style: TextStyle(fontSize: FontSize.s16, fontWeight: FontWeight.w600,
-              ),
+          style: TextStyle(
+            fontSize: FontSize.s16,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         actions: [
           Padding(
@@ -45,7 +48,9 @@ class _BookSessionFreeState extends State<BookSessionFree> {
       body: ListView(
         children: [
           sessionContainer(),
-          progressBar(width: 69.10,),
+          progressBar(
+            width: 69.10,
+          ),
           SizedBox(
             height: 20.0,
           ),
@@ -57,15 +62,18 @@ class _BookSessionFreeState extends State<BookSessionFree> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
-                  width: 158,
-                  height: 36,
+                  width: 158.w,
+                  height: 36.h,
                   decoration: ShapeDecoration(
-                    color: index == 0 ?ColorManager.primary2 : ColorManager.white ,
+                    color:
+                        index == 0 ? ColorManager.primary2 : ColorManager.white,
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
                         width: 1,
                         strokeAlign: BorderSide.strokeAlignOutside,
-                        color:  index == 0? ColorManager.primary2: ColorManager.grey1,
+                        color: index == 0
+                            ? ColorManager.primary2
+                            : ColorManager.grey1,
                       ),
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -74,32 +82,40 @@ class _BookSessionFreeState extends State<BookSessionFree> {
                       child: Text(
                     AppStrings.collegeMentor,
                     style: TextStyle(
-
                         fontSize: FontSize.s16,
                         color: index == 0
-                            ? ColorManager.primary : ColorManager.grey1),
+                            ? ColorManager.primary
+                            : ColorManager.grey1),
                   ))),
               //
               Container(
-                  width: 158,
-                  height: 36,
-                  decoration: ShapeDecoration(
-                    color: index == 0 ?  ColorManager.white:ColorManager.primary2 ,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        width: 1,
-                        strokeAlign: BorderSide.strokeAlignOutside,
-                        color: index == 0? ColorManager.grey1: ColorManager.primary2,
-                      ),
-                      borderRadius: BorderRadius.circular(20),
+                width: 158.w,
+                height: 36.h,
+                decoration: ShapeDecoration(
+                  color:
+                      index == 0 ? ColorManager.white : ColorManager.primary2,
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                      width: 1,
+                      strokeAlign: BorderSide.strokeAlignOutside,
+                      color: index == 0
+                          ? ColorManager.grey1
+                          : ColorManager.primary2,
                     ),
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Center(
-                      child: Text(AppStrings.careerAdvisor,
-                          style: TextStyle(
-                              fontSize: FontSize.s16,
-                              color: index == 0
-                                  ?  ColorManager.grey1: ColorManager.primary )))),
+                ),
+                child: Center(
+                  child: Text(
+                    AppStrings.careerAdvisor,
+                    style: TextStyle(
+                        fontSize: FontSize.s16,
+                        color: index == 0
+                            ? ColorManager.grey1
+                            : ColorManager.primary),
+                  ),
+                ),
+              ),
             ],
           ),
           Padding(
@@ -116,17 +132,22 @@ class _BookSessionFreeState extends State<BookSessionFree> {
           const SizedBox(
             height: AppSize.s16,
           ),
-          materialButton(
-            text: AppStrings.next,
-            color: ColorManager.primary,
-            onPressed: () {
-              setState(() {
-                index = index + 1;
-              });
-              index != 1 ? Navigator.pushNamed(context, Routs.mentorsRoute): null;
-            },
-            circle: 100,
-            textColor: ColorManager.white,
+          Padding(
+            padding: const EdgeInsets.only(top: AppPadding.p24,left: AppPadding.p24),
+            child: materialButton(
+              text: AppStrings.next,
+              color: ColorManager.primary,
+              onPressed: () {
+                setState(() {
+                  index = index + 1;
+                });
+                index != 1
+                    ? Navigator.pushNamed(context, Routs.mentorsRoute)
+                    : null;
+              },
+              circle: 100,
+              textColor: ColorManager.white,
+            ),
           )
         ],
       ),
@@ -163,5 +184,3 @@ class textGetHelp extends StatelessWidget {
     );
   }
 }
-
-
