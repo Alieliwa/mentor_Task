@@ -49,7 +49,7 @@ class _BookSessionFreeState extends State<BookSessionFree> {
         children: [
           sessionContainer(),
           progressBar(
-            width: 69.10,
+            currentStep: 20,
           ),
           SizedBox(
             height: 20.0,

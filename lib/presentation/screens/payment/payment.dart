@@ -406,7 +406,7 @@ class Payment extends StatelessWidget {
               text: AppStrings.confirm,
               color: ColorManager.primary,
               onPressed: () {
-                Navigator.pushReplacementNamed(context, Routs.successfullyRoute);
+                Navigator.pushNamed(context, Routs.successfullyRoute);
               },
               circle: 100,
               textColor: ColorManager.white,
