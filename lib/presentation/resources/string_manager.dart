@@ -29,6 +29,7 @@ class AppStrings{
   static const sessionDuration = "The session duration is 30 minutes";
   static const date = "Date";
   static const time = "Time";
+  static const done = "Done";
   static const payment = "Payment";
   static const promoCode = "Promo code";
   static const bookSession = "Book a session";

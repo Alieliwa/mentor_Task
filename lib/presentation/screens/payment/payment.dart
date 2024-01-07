@@ -2,6 +2,7 @@ import 'package:elmentor/presentation/component/buildbutton.dart';
 import 'package:elmentor/presentation/component/search_bar.dart';
 import 'package:elmentor/presentation/resources/color_manager.dart';
 import 'package:elmentor/presentation/resources/fonts_manager.dart';
+import 'package:elmentor/presentation/resources/routs_manager.dart';
 import 'package:elmentor/presentation/resources/string_manager.dart';
 import 'package:elmentor/presentation/resources/valuse_manager.dart';
 import 'package:flutter/material.dart';
@@ -405,7 +406,7 @@ class Payment extends StatelessWidget {
               text: AppStrings.confirm,
               color: ColorManager.primary,
               onPressed: () {
-                // Navigator.pushReplacementNamed(context, Routs.successfullyRoute);
+                Navigator.pushReplacementNamed(context, Routs.successfullyRoute);
               },
               circle: 100,
               textColor: ColorManager.white,

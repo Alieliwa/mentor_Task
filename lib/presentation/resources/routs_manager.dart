@@ -27,8 +27,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => DetailsScreen());
       case Routs.paymentRoute:
         return MaterialPageRoute(builder: (_) => Payment());
-      // case Routs.successfullyRoute:
-      //   return MaterialPageRoute(builder: (_) => BookedSuccessfully());
+      case Routs.successfullyRoute:
+        return MaterialPageRoute(builder: (_) => BookedSuccessfully());
       // case Routs.storeDetailsRoute:
       //   return MaterialPageRoute(builder: (_) => StoreDetailsView());
       // case Routs.onBoardingRoute:
