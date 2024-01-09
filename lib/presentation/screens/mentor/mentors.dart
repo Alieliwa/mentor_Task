@@ -5,6 +5,7 @@ import 'package:elmentor/presentation/resources/fonts_manager.dart';
 import 'package:elmentor/presentation/resources/string_manager.dart';
 import 'package:elmentor/presentation/resources/valuse_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Mentors extends StatefulWidget {
   const Mentors({super.key});
@@ -29,20 +30,23 @@ class _MentorsState extends State<Mentors> {
       ),
       body: Column(
         children: [
-          progressBar(width: 138.21,),
+          progressBar(currentStep: 50,),
           SizedBox(height: AppSize.s31,),
-          buildTextFormField(onSubmited: (){},
-          hintText: AppStrings.search,
-            prefix: Padding(
-              padding: const EdgeInsets.all(AppPadding.p20),
-              child: Image.asset("assets/image/img_3.png",
-              width: AppSize.s16,
-              height: AppSize.s16,
+          Padding(
+            padding:  EdgeInsets.only(right: AppPadding.p24.w,left:AppPadding.p24.w,bottom: AppPadding.p24.h),
+            child: buildTextFormField(onSubmited: (){},
+            hintText: AppStrings.search,
+              prefix: Padding(
+                padding: const EdgeInsets.all(AppPadding.p20),
+                child: Image.asset("assets/image/img_3.png",
+                width: AppSize.s16,
+                height: AppSize.s16,
+                ),
               ),
-            ),
-            suffix: Padding(
-              padding: const EdgeInsets.only(right: AppPadding.p8),
-              child: Icon(Icons.filter_list),
+              suffix: Padding(
+                padding: const EdgeInsets.only(right: AppPadding.p8),
+                child: Icon(Icons.filter_list),
+              ),
             ),
           ),
           Expanded(

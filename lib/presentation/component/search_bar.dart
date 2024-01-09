@@ -56,15 +56,15 @@ class buildTextFormField extends StatelessWidget {
         textDirection: TextDirection.rtl,
         decoration: InputDecoration(
           contentPadding:
-              const EdgeInsets.only(right: 15, left: 15, top: 0, bottom: 0),
+              const EdgeInsets.only(right: 15, left: 15, top: 10, bottom: 0),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: ColorManager.primary,
             ),
-            borderRadius: BorderRadius.circular(1000.0),
+            borderRadius: BorderRadius.circular(25),
           ),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(1000),
+            borderRadius: BorderRadius.circular(25),
           ),
           hintText: hintText,
           suffixIcon: suffix,

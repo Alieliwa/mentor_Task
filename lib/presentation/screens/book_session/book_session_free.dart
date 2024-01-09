@@ -49,7 +49,7 @@ class _BookSessionFreeState extends State<BookSessionFree> {
         children: [
           sessionContainer(),
           progressBar(
-            width: 69.10,
+            currentStep: 20,
           ),
           SizedBox(
             height: 20.0,
@@ -133,7 +133,7 @@ class _BookSessionFreeState extends State<BookSessionFree> {
             height: AppSize.s16,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: AppPadding.p24,left: AppPadding.p24),
+            padding: const EdgeInsets.only(right: AppPadding.p24,left: AppPadding.p24),
             child: materialButton(
               text: AppStrings.next,
               color: ColorManager.primary,

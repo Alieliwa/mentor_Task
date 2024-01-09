@@ -16,9 +16,15 @@ class AppStrings{
   static const textField = "Field";
   static const textTitle = "Title";
   static const next = "Next";
+  static const submit = "Submit";
+  static const cancel = "Cancel";
   static const book = "Book";
+  static const bookFreeRoute = "book Free Route";
+  static const mentorSessionFinished = "mentor Session Finished";
+  static const rateRheSession = "Rate the session";
   static const college = "College";
   static const university = "University";
+  static const mandatory = "Your rating was - Mandatory";
   static const departMent = "DepartMent";
   static const optional = "(Optional)";
   static const mentors = "Mentors";
@@ -29,6 +35,11 @@ class AppStrings{
   static const sessionDuration = "The session duration is 30 minutes";
   static const date = "Date";
   static const time = "Time";
+  static const upcoming = "Upcoming";
+  static const finished = "finished";
+  static const review = "Review";
+  static const done = "Done";
+  static const mentorSessions = "Mentor Sessions";
   static const payment = "Payment";
   static const promoCode = "Promo code";
   static const bookSession = "Book a session";

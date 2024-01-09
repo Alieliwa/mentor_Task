@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           onGenerateRoute: RouteGenerator.getRoute,
-          initialRoute: Routs.bookFreeRoute,
+          initialRoute: Routs.home,
         );
       },
     );

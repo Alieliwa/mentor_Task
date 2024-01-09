@@ -2,6 +2,7 @@ import 'package:elmentor/presentation/resources/color_manager.dart';
 import 'package:elmentor/presentation/resources/fonts_manager.dart';
 import 'package:elmentor/presentation/resources/valuse_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class materialButton extends StatelessWidget {
   materialButton({
@@ -24,8 +25,8 @@ class materialButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 56,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(circle!)),
+      height: 56.h,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(circle!),),
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: MaterialButton(
         color: color,

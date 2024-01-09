@@ -32,7 +32,7 @@ class DetailsScreen extends StatelessWidget {
         padding: const EdgeInsets.only(right: AppPadding.p24,left: AppPadding.p24),
         child: ListView(
           children: [
-            progressBar(width: 257.87,),
+            progressBar(currentStep: 80,),
             SizedBox(
               height: AppSize.s31,
             ),
@@ -99,7 +99,7 @@ class DetailsScreen extends StatelessWidget {
               text: AppStrings.book,
               color: ColorManager.primary,
               onPressed: () {
-                Navigator.pushReplacementNamed(context, Routs.paymentRoute);
+                Navigator.pushNamed(context, Routs.paymentRoute);
               },
               circle: 100,
               textColor: ColorManager.white,

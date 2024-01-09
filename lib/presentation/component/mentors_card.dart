@@ -7,7 +7,7 @@ class MentorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        Navigator.pushReplacementNamed(context, Routs.detailsRoute);
+        Navigator.pushNamed(context, Routs.detailsRoute);
       },
       child: Padding(
         padding: const EdgeInsets.only(right: AppPadding.p24,left: AppPadding.p24,bottom: AppPadding.p24 ),
@@ -131,9 +131,7 @@ class MentorCard extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 14,
-                                  fontFamily: 'Nunito',
                                   fontWeight: FontWeight.w500,
-                                  height: 0.15,
                                 ),
                               ),
                               const SizedBox(width: 8),

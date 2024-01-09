@@ -11,7 +11,7 @@ class ColorManager {
 //0xFF3E4450
   //0xFF667085
   static Color darkPrimary = const Color(0x07101828);
-  static Color lightPrimary = const Color(0xccd17d11);
+  static Color light= const Color(0xFFE7E9EC);
   static Color grey1 = const Color(0xFF667085);//
   static Color grey2 = const Color(0xFF3E4450);
   static Color grey5 = const Color(0xB23E4450);
