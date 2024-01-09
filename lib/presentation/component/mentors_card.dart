@@ -131,9 +131,7 @@ class MentorCard extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 14,
-                                  fontFamily: 'Nunito',
                                   fontWeight: FontWeight.w500,
-                                  height: 0.15,
                                 ),
                               ),
                               const SizedBox(width: 8),

@@ -3,6 +3,7 @@ import 'package:elmentor/presentation/component/done.dart';
 import 'package:elmentor/presentation/component/paywidget.dart';
 import 'package:elmentor/presentation/resources/color_manager.dart';
 import 'package:elmentor/presentation/resources/fonts_manager.dart';
+import 'package:elmentor/presentation/resources/routs_manager.dart';
 import 'package:elmentor/presentation/resources/string_manager.dart';
 import 'package:elmentor/presentation/resources/valuse_manager.dart';
 import 'package:flutter/material.dart';
@@ -36,19 +37,19 @@ class BookedSuccessfully extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: ColorManager.green1,
-              fontSize: 24,
+              fontSize: FontSize.s14,
               fontWeight: FontWeight.w700,
             ),
           ),
           SizedBox(height: AppPadding.p36.h,),
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(AppPadding.p16),
             clipBehavior: Clip.antiAlias,
             decoration: ShapeDecoration(
               color: Colors.white,
               shape: RoundedRectangleBorder(
-                side: BorderSide(width: 1, color: Color(0xFFE7E9EC)),
-                borderRadius: BorderRadius.circular(16),
+                side: BorderSide(width: 1.w, color: Color(0xFFE7E9EC)),
+                borderRadius: BorderRadius.circular(16.r),
               ),
             ),
             child: Column(
@@ -57,26 +58,26 @@ class BookedSuccessfully extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: 295,
-                  height: 73,
+                  width: 295.w,
+                  height: 90.h,
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 1.50,
-                        top: 3,
+                        left: 1.50.w,
+                        top: 3.h,
                         child: Container(
-                          width: 28,
-                          height: 28,
+                          width: 28.w,
+                          height: 28.h,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(),
                           child: Stack(
                             children: [
                               Positioned(
-                                left: 5.15,
-                                top: 0.82,
+                                left: 5.15.w,
+                                top: 0.82.h,
                                 child: Container(
-                                  width: 17.71,
-                                  height: 26.35,
+                                  width: 17.71.w,
+                                  height: 26.35.h,
                                   child: Stack(children: [
                                     Image.asset("assets/image/img_8.png",
                                       width: 28.w,
@@ -92,7 +93,7 @@ class BookedSuccessfully extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: AppPadding.p36),
                         child: Container(
-                          height: 73,
+                          // height: 73.h,
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -107,7 +108,7 @@ class BookedSuccessfully extends StatelessWidget {
                                         text: 'You booked a session with ',
                                         style: TextStyle(
                                           color: Color(0xFF3E4450),
-                                          fontSize: 14,
+                                          fontSize: FontSize.s14,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
@@ -115,7 +116,7 @@ class BookedSuccessfully extends StatelessWidget {
                                         text: 'Ahmad Mahmoud',
                                         style: TextStyle(
                                           color: Color(0xFF851FE7),
-                                          fontSize: 14,
+                                          fontSize: FontSize.s14,
                                           fontWeight: FontWeight.w700,
                                         ),
                                       ),
@@ -123,14 +124,14 @@ class BookedSuccessfully extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              const SizedBox(height: 4),
+                               SizedBox(height: 4),
                               SizedBox(
                                 width: double.infinity,
                                 child: Text(
                                   'Tue 8 Nov at 8:00 pm',
                                   style: TextStyle(
                                     color: Color(0xFF252830),
-                                    fontSize: 18,
+                                    fontSize: FontSize.s18,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -153,8 +154,10 @@ class BookedSuccessfully extends StatelessWidget {
             child: materialButton(
               text: AppStrings.done,
               color: ColorManager.primary,
-              onPressed: () {},
-              circle: 100,
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, Routs.home);
+              },
+              circle: 100.r,
               textColor: ColorManager.white,
             ),
           )
